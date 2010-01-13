@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    An easy-to-use class for error objects
 License:    GPL+ or Artistic
@@ -14,8 +14,11 @@ Source0:    http://www.cpan.org/modules/by-module/Throwable/%{upstream_name}-%{u
 BuildRequires: perl(Devel::StackTrace)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Moose)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
+Requires: perl(Devel::StackTrace)
 
 %description
 Throwable is a role for classes that are meant to be thrown as exceptions
@@ -27,11 +30,10 @@ any previous value for '$@' and calls 'die $self'.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -45,5 +47,3 @@ rm -rf %buildroot
 %doc Changes LICENSE README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
