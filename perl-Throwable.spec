@@ -1,9 +1,9 @@
 %define upstream_name    Throwable
-%define upstream_version 0.100090
+%define upstream_version 0.101110
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    An easy-to-use class for error objects
 License:    GPL+ or Artistic
