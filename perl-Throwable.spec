@@ -1,15 +1,15 @@
 %define upstream_name    Throwable
-%define upstream_version 0.102080
+%define upstream_version 1.001
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	An easy-to-use class for error objects
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Throwable/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/rjbs/Throwable
+Source0:	https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Throwable-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
